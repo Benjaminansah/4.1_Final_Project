@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script 
+    src="https://kit.fontawesome.com/2be2e84de4.js" 
+    crossorigin="anonymous">
+</script>
+
+</head>
+<body id="cars__body">
+    <section>
+        <nav>
+            <div class="nav__container">
+                <img class="logo" src="./assets/logo.png" alt="">
+                <ul class="nav__links">
+                    <li><a href="#" class="nav__link">Home</a></li>
+                    <li><a href="#" class="nav__link">Find your car</a></li>
+                    <li><a href="#" class="nav__link--primary">Contact</a></li>
+                </ul>
+            </div>
+                <div class="nav__heading">
+                    <h2 class="nav__title">Browse Our Cars</h2>
+                    <input class="bar" type="text" placeholder="Search by Make, Model or Keyword">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+           
+        
+        </nav>
+    </section>
+    <main id="about">
+        <section class="about__section">
+            <div class="about__container">
+                <div class="about__row">
+                    <div class="about__img">
+                        <img class="logo about__logo" src="./assets/logo.png" alt="">
+                    </div>
+                    <div class="cars__header">
+                        <h2 class="about__title">Welcome to Kingdom Car Sales, where you are treated as a royalty!</h2>
+                        <h3 class="about__sub-title">Located at 101 Kingdom Street, Shrewsbury, MA, USA 202-234-5678 </h3>
+                        <p class="about__para">At Kingdom Car Sales, we believe it is 
+                            essential you know about us so we can get to know you much 
+                            better. Our dealership, which emphasises primarily on the needs of 
+                            local drivers, has been proudly serving Massachusetts and neibouring States
+                            for over three decades. Our staff team is always accommodating and 
+                            thoughtful. Plus, we continue to add resources to help you during 
+                            each step of the car-shopping and ownership experience. 
+                            From finding and financing the right vehicle for you to servicing it 
+                            over the years, wee will always be around when any automotive needs come up in your life!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <main id="cars__main">
+        <section>
+            <div class="cars__container">
+                <div class="cars__row">
+                    <div class="cars__main--wrapper">
+                    <h3 class="main__title">Search results:</h3>
+                    <select id="filter" onclick="filterCars(event)">
+                        <option value="" disabled selected>Sort</option>
+                        <option value="LOW_TO_HIGH">VehicleYear, Low to High</option>
+                        <option value="HIGH_TO_LOW">VehicleYear, High to Low</option>
+                        <option value="LOW_TO_HIGH">VehiclePrice, Low to High</option>
+                        <option value="HIGH_TO_LOW">VehiclePrice, High to Low</option>
+                        <option value="LOW_TO_HIGH">VehicleMileage, Low to High</option>
+                        <option value="HIGH_TO_LOW">VehicleMileage, High to Low</option>
+                        <option value="RATING">Rating</option>
+                    </select>
+                </div>
+                  <h2 class="main__heading">Lots of <span class="red">Luxurious</span> Vehicles for Royalties Like You!</h2>
+                  <section id="features">
+                    <div class="cars">
+                        <div class="car">
+                            <figure car__img--wrapper>
+                             <img class="car__img" src="./assets/Aston Martin.avif" alt="">
+                            </figure>
+                            <div class="MakeName">ASTON MARTIN</div>
+                            <div class="MakeId">Make ID: 440</div>
+                           <div class="VehicleTypleId">ID: 2</div>
+                           <div class="VehicleTypleName">Passenger Car</div>
+                          <div class="VehicleYear">Year: 2016</div>
+                          <div class="VehiclePrice">Price: $75,500</div>
+                         <div class="VehicleMileage">Mileage: 67,000</div>
+                    <div class="car__ratings">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+        
+                   </div>
+                    </div>
+                    <div class="car">
+                        <figure car__img--wrapper>
+                         <img class="car__img" src="./assets/Tesla Model-X.avif" alt="">
+                        </figure>
+                        <div class="MakeName">TESLA MODEL-X</div>
+                        <div class="MakeId">Make ID: 441</div>
+                       <div class="VehicleTypleId">ID: 2</div>
+                       <div class="VehicleTypleName">Passenger Car</div>
+                      <div class="VehicleYear">Year: 2024</div>
+                      <div class="VehiclePrice">Price: $54,873</div>
+                     <div class="VehicleMileage">Mileage: 13:300</div>
+                <div class="car__ratings">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+    
+               </div>
+                </div>
+                <div class="car">
+                    <figure car__img--wrapper>
+                     <img class="car__img" src="./assets/Jaguar.jpg" alt="">
+                    </figure>
+                    <div class="MakeName">JAGUAR</div>
+                    <div class="MakeId">Make ID: 442</div>
+                   <div class="VehicleTypleId">ID: 2</div>
+                   <div class="VehicleTypleName">Passenger Car</div>
+                  <div class="VehicleYear">Year: 2026</div>
+                  <div class="VehiclePrice">Price: $102,734</div>
+                 <div class="VehicleMileage">Mileage: 1,003</div>
+            <div class="car__ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+           </div>
+            </div>
+                        </div>
+                        
+                    </div>
+                  </section>
+                <div class="cars">
+                    <i class="fa-solid fa-spinner cars__loading--spinner"></i>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</main>
+
+<footer">
+  <div class="footer__container">
+    <div class="row row__column">
+      <a href="#">
+        <figure class="footer__logo">
+          <img src="./assets/logo.png" class="logo footer__logo" alt="" />
+        </figure>
+      </a>
+      <div class="footer__list--wrapper">
+      <div class="footer__list">
+        <a href="#" class="footer__link">Home</a>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#cars__main" class="footer__link">Cars</a>
+        <a href="#about" class="footer__link">Contact</a>
+      </div>
+      <div class="footer__social--links">
+        <a class="social__link" href="https://facebook.com" target="_blank">
+            <i class="fa-brands fa-facebook"></a></i></a>
+        <a href="https://twitter.com" target="_blank">
+            <i class="fa-brands fa-square-twitter social__link"></i></a>
+            <a href="https://tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok social__link"></i></a>
+                <a href="https://yahoo.com" target="_blank">
+                    <i class="fa-solid fa-envelope social__link"></i></a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram social__link"></i></a>
+                   <a href="https://linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin social__link"></i></a>
+      </div>
+      <div class="footer__copyright">Copyright &copy; 2026 Kingdom Car Sales Library</div>
+    </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+<script src="index.js"></script>
+<script src="cars.js"></script>
+<script src="search.js"></script>
+</html>
