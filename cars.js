@@ -30,7 +30,7 @@ if (filter === "LOW_TO_HIGH") {
     b.VehicleMileage - a.VehicleMileage
   )
 } else if (filter === "RATING") {
-  cars.sort((a, b) => b.rating - a.rating);
+  cars.sort((a, b) => b.Rating - a.Rating);
 }
 
 const carsHtml = cars
