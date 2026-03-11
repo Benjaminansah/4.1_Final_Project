@@ -25,11 +25,11 @@
             </div>
                 <div class="nav__heading">
                     <h2 class="nav__title">Browse Our Cars</h2>
-                    <input class="bar" type="text" placeholder="Search by Make, Model or Keyword" id="searchImput">
+                    <input id="searchInput" class="bar" type="text" placeholder="Search by Make, Model or Keyword">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-           
-        
+             
+
         </nav>
     </section>
     <main id="about">
@@ -64,7 +64,7 @@
                 <div class="cars__row">
                     <div class="cars__main--wrapper">
                     <h3 class="main__title">Search results:</h3>
-                    <select id="filter" onchange="filterCars(event)">
+                    <!-- <select id="filter" onchange="filterCars(event)">
                         <option value="" disabled selected>Sort</option>
                         <option value="LOW_TO_HIGH">VehicleYear, Low to High</option>
                         <option value="HIGH_TO_LOW">VehicleYear, High to Low</option>
@@ -73,6 +73,17 @@
                         <option value="LOW_TO_HIGH">VehicleMileage, Low to High</option>
                         <option value="HIGH_TO_LOW">VehicleMileage, High to Low</option>
                         <option value="RATING">Rating</option>
+                    </select> -->
+
+                    <select id="filter" onclick="filterCars(event)">
+                        <option value="" disabled selected>Sort</option>
+                        <option value="YEAR_LOW_TO_HIGH">VehicleYear, Low to High</option>
+                        <option value="YEAR_HIGH_TO_LOW">VehicleYear, High to Low</option>
+                        <option value="PRICE_LOW_TO_HIGH">VehiclePrice, Low to High</option>
+                        <option value="PRICE_HIGH_TO_LOW">VehiclePrice, High to Low</option>
+                        <option value="MILEAGE_LOW_TO_HIGH">VehicleMileage, Low to High</option>
+                        <option value="MILEAGE_HIGH_TO_LOW">VehicleMileage, High to Low</option>
+                        <option value="RATING">Rating</option>
                     </select>
                 </div>
                   <h2 class="main__heading">Lots of <span class="red">Luxurious</span> Vehicles for Royalties Like You!</h2>
@@ -80,6 +91,7 @@
                     <div class="cars">
                         
                     </div>
+                    
                   </section>
                 <div class="cars">
                     <i class="fa-solid fa-spinner cars__loading--spinner"></i>

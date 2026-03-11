@@ -1,5 +1,59 @@
 
 
+
+// async function renderCars(filter) {
+//   const carsWrapper = document.querySelector(".cars");
+
+//   carsWrapper.classList += ' cars__loading'
+
+//   if (!cars) {
+//     cars = await getCars();
+//   }
+
+
+// carsWrapper.classList.remove('cars__loading')
+
+// if (filter === "LOW_TO_HIGH") {
+//   cars.sort(
+//     (a, b) =>
+//     b.VehicleYear - a.VehicleYear ||
+//     a.VehiclePrice - b.VehiclePrice ||
+//     a.VehicleMileage - b.VehicleMileage
+
+//   );
+// } else if (filter === "HIGH_TO_LOW") {
+//   cars.sort(
+//     (a, b) =>
+//     a.VehicleYear - b.VehicleYear ||
+//     b.VehiclePrice - a.VehiclePrice ||
+//     b.VehicleMileage - a.VehicleMileage
+//   )
+// } else if (filter === "RATING") {
+//   cars.sort((a, b) => b.Rating - a.Rating);
+// }
+
+// const carsHtml = cars
+// .map((car) => {
+// return `<div class="car">
+// <figure class="car__img--wrapper">
+//  <img class="car__img" src="${car.VehicleUrl}" alt="">
+//   </figure>
+//   <div class="MakeName">${car.MakeName}</div>
+//   <div class="MakeId">Vehicle Make ID: ${car.MakeId}</div>
+//     <div class="VehicleTypleId">Vehicle Type ID: ${car.VehicleTypeId}</div>
+//     <div class="VehicleTypleName">Vehicle Type: ${car.VehicleTypeName}</div>
+//       <div class="VehicleYear">Year: ${car.VehicleYear}</div>
+//       <div class="VehiclePrice">Price: ${car.VehiclePrice}</div>
+//       <div class="VehicleMileage">Mileage: ${car.VehicleMileage}</div>
+//       <div class="car__ratings">${ratingsHTML(car.Rating)}</div>
+//     </div>`;
+
+// })
+// .join("");
+
+// carsWrapper.innerHTML = carsHtml;
+// }
+
 let cars;
 
 async function renderCars(filter) {
@@ -14,21 +68,34 @@ async function renderCars(filter) {
 
 carsWrapper.classList.remove('cars__loading')
 
-if (filter === "LOW_TO_HIGH") {
-  cars.sort(
-    (a, b) =>
-    b.VehicleYear - a.VehicleYear ||
-    a.VehiclePrice - b.VehiclePrice ||
-    a.VehicleMileage - b.VehicleMileage
-
-  );
-} else if (filter === "HIGH_TO_LOW") {
-  cars.sort(
-    (a, b) =>
-    a.VehicleYear - b.VehicleYear ||
-    b.VehiclePrice - a.VehiclePrice ||
-    b.VehicleMileage - a.VehicleMileage
-  )
+if (filter === "YEAR_LOW_TO_HIGH") {
+  cars.sort((a, b) => a.VehicleYear - b.VehicleYear);
+} else if (filter === "YEAR_HIGH_TO_LOW") {
+  cars.sort((a, b) => b.VehicleYear - a.VehicleYear);
+} else if (filter === "PRICE_LOW_TO_HIGH") {
+  cars.sort((a, b) => {
+    const priceA = parseFloat(a.VehiclePrice.replace(/[$,]/g, ''));
+    const priceB = parseFloat(b.VehiclePrice.replace(/[$,]/g, ''));
+    return priceA - priceB;
+  });
+} else if (filter === "PRICE_HIGH_TO_LOW") {
+  cars.sort((a, b) => {
+    const priceA = parseFloat(a.VehiclePrice.replace(/[$,]/g, ''));
+    const priceB = parseFloat(b.VehiclePrice.replace(/[$,]/g, ''));
+    return priceB - priceA;
+  });
+} else if (filter === "MILEAGE_LOW_TO_HIGH") {
+  cars.sort((a, b) => {
+    const mileageA = parseInt(a.VehicleMileage);
+    const mileageB = parseInt(b.VehicleMileage);
+    return mileageA - mileageB;
+  });
+} else if (filter === "MILEAGE_HIGH_TO_LOW") {
+  cars.sort((a, b) => {
+    const mileageA = parseInt(a.VehicleMileage);
+    const mileageB = parseInt(b.VehicleMileage);
+    return mileageB - mileageA;
+  });
 } else if (filter === "RATING") {
   cars.sort((a, b) => b.Rating - a.Rating);
 }
@@ -54,8 +121,6 @@ return `<div class="car">
 
 carsWrapper.innerHTML = carsHtml;
 }
-
-
 
 function ratingsHTML(rating) {
   let ratingHTML = "";
@@ -132,7 +197,7 @@ setTimeout(() => {
         "VehicleTypeId": 2,
         "VehicleTypeName": "Passenger Car",
         "VehicleYear": 2017,
-        "VehiclePrice": "$132,734",
+        "VehiclePrice": "$160,734",
         "VehicleMileage": "15900",
         "Rating": 4,
         "VehicleUrl": "assets/Rolls Royce-Phantom.jpg"
