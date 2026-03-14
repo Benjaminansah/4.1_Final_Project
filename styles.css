@@ -278,6 +278,7 @@ CARS
 
 .car__img {
   width: 400px;
+ 
 }
 
 .car__img--wrapper {
@@ -315,12 +316,25 @@ CARS
 
 }
 
+
 .car__img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+  width: 60%;
+  margin: 0 auto;
+  height: 400%x;
+  object-fit: contain;
   border-radius: 8px;
 }
+    .MakeName,
+    .MakeId,
+    .VehicleTypleId,
+    .VehicleTypleName,
+    .VehicleYear,
+    .VehiclePrice,
+    .VehicleMileage,
+    .car__ratings {
+      text-align: center;
+    }
+
 
 
 
@@ -460,3 +474,310 @@ FOOTER
   }
   
 }
+
+@media (max-width: 1230px) {
+  .fa-magnifying-glass {
+    top: 31.5%;
+    right: 36%;
+  }
+
+  .bar {
+    width: 350px;
+  }
+  
+}
+
+@media (max-width: 1160px) {
+  .fa-magnifying-glass {
+    top: 31.5%;
+    right: 35.5%;
+  }
+
+  .bar {
+    width: 350px;
+  }
+  
+}
+
+@media (max-width: 1130px) {
+  .fa-magnifying-glass {
+    top: 31.5%;
+    right: 35%;
+  }
+
+  .bar {
+    width: 350px;
+  }
+
+  .about__logo {
+    margin: 24px;
+    width: 250px;
+    height: 250px;
+  }
+  
+}
+
+@media (max-width: 1000px) {
+  .fa-magnifying-glass {
+    top: 31.5%;
+    right: 33%;
+  }
+
+  .bar {
+    width: 350px;
+  }
+
+  .about__logo {
+    margin: 18px;
+    width: 250px;
+    height: 200px;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .fa-magnifying-glass {
+    top: 31.5%;
+    right: 31%;
+  }
+
+  .bar {
+    width: 350px;
+  }
+
+  .about__logo {
+    margin: 18px;
+    width: 200px;
+    height: 200px;
+  }
+  
+}
+
+@media (max-width: 800px) {
+  .fa-magnifying-glass {
+    top: 31.5%;
+    right: 29%;
+  }
+
+  .bar {
+    width: 350px;
+  }
+
+  .about__logo {
+    margin: 18px;
+    width: 200px;
+    height: 200px;
+  }
+  
+}
+
+
+
+  /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+
+  @media (max-width: 768px) {
+    .fa-magnifying-glass {
+      top: 31.5%;
+      right: 28%;
+    }
+  
+    .bar {
+      width: 350px;
+    }
+
+    .nav__link {
+      font-size: 20px;
+    }
+
+     .nav__logo {
+      display: none;
+     }
+
+     .nav__container {
+      padding: 64px 24px;
+      display: flex;
+      justify-content: center;
+     }
+     
+     .about__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     }
+    .about__logo {
+      margin: 18px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .about__title {
+      font-size: 24px;
+    }
+    .about__sub-title {
+      font-size: 20px;
+    }
+    
+    .about__para {
+      font-size: 16px;
+    }
+
+    .main__title {
+      font-size: 20px;
+
+    }
+    .main__heading {
+      font-size: 24px;
+    }
+
+    .MakeName {
+      font-size: 16px;
+    }
+    .MakeId,
+    .VehicleTypleId,
+    .VehicleTypleName,
+    .VehicleYear,
+    .VehiclePrice,
+    .VehicleMileage,
+    .car__ratings {
+       font-size: 14px;
+    }
+    .footer__link {
+      margin: 0 0 0 30px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .fa-magnifying-glass {
+      top: 31.5%;
+      right: 26%;
+    }
+  }
+
+  @media (max-width: 631px) {
+    .fa-magnifying-glass {
+      top: 31.5%;
+      right: 22%;
+    }
+  }
+
+  
+  
+  @media (max-width: 600px) {
+    .nav__link {
+      font-size: 18px;
+    }
+
+    .nav__link--primary {
+      font-size: 18px;
+    }
+    
+    .nav__title {
+      font-size: 28px;
+    }
+
+    .fa-magnifying-glass {
+      top: 30.5%;
+      right: 22%;
+    }
+  
+    
+    .footer__link {
+      margin: 0 0 0 10px;
+      font-size: 18px;
+    }
+
+    .social__link {
+      margin: 0 14px 8px;
+      padding: 8px;
+    }
+
+    .footer__copyright {
+      font-size: 14px;
+    }
+  }
+  
+  /* SMALL PHONES, LARGE SMARTPHONES */
+  @media (max-width: 550px) {
+    .nav__link {
+      font-size: 16px;
+    }
+
+    .nav__link--primary {
+      font-size: 16px;
+    }
+
+    .nav__title {
+      font-size: 24px;
+    }
+
+    .fa-magnifying-glass {
+      top: 29.5%;
+      right: 19%;
+    }
+
+    .about__logo {
+      height: 150px;
+      width: 150px;
+      margin: 12px;
+    }
+    .footer__link {
+      margin: 0 0 0 0px;
+      font-size: 16px;
+    }
+
+    .social__link {
+      margin: 0 6px 8px;
+      padding: 8px;
+    }
+
+    .footer__copyright {
+      font-size: 12px;
+    }
+
+    .footer__logo {
+      height: 100px;
+      width: 100px;
+      margin: 0 auto;
+    }
+
+  }
+
+  @media (max-width: 515px) {
+   .nav__link {
+    margin: 0;
+   }
+
+   .nav__link--primary {
+    margin: 0;
+   }
+   
+    .fa-magnifying-glass {
+      top: 29.5%;
+      right: 16%;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .fa-magnifying-glass {
+      top: 29.5%;
+      right: 12%;
+    }
+  }
+
+  @media (max-width: 454px) {
+    .footer__link {
+      font-size: 12px;
+      padding: 16px;
+    }
+  }
+  @media (max-width: 407.5px) {
+    .fa-magnifying-glass {
+      top: 32%;
+      right: 8%;
+    }
+
+    .footer__link {
+      font-size: 12px;
+      padding: 0;
+    }
+  }
